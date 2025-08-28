@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2 Template</title>
+</head>
+<body>
+    <button id="start">Start Audio</button>
+    <button id="stop">Stop Audio</button>
+    <div>
+        <p>Frequency</p><input id="baseFreq" type="range" min="50" max="1000" value="300">
+        <p>Master Gain</p><input id="gain" type="range" min="0" max="1" value="0" step="0.01">
+    </div>
+
+
+    <script>
+        //Put your Javascript here
+        const ctx; // <---- define your audio context here, must be named ctx
+
+        //don't edit below here
+        document.querySelector("#start").onclick = ()=> ctx.resume();
+        document.querySelector("#stop").onclick = ()=> ctx.suspend()
+    </script>
+</body>
+</html>
